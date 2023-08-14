@@ -1,0 +1,109 @@
+ERROR - 2022-11-21 22:13:23 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'productos_rubik' in C:\xampp\htdocs\codeigniter\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'productos_rubik', 3306, '', 0)
+#1 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(1360): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(1394): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\codeigniter\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\xampp\htdocs\codeigniter\system\Database\MigrationRunner.php(167): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\htdocs\codeigniter\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\codeigniter\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\codeigniter\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\codeigniter\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#11 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(920): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#12 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#13 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(347): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\codeigniter\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\codeigniter\spark(98): CodeIgniter\CLI\Console->run()
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'productos_rubik' in C:\xampp\htdocs\codeigniter\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(1360): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(1394): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\codeigniter\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\xampp\htdocs\codeigniter\system\Database\MigrationRunner.php(167): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\codeigniter\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\htdocs\codeigniter\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\xampp\htdocs\codeigniter\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\xampp\htdocs\codeigniter\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#10 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(920): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#11 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#12 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(347): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\codeigniter\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\codeigniter\spark(98): CodeIgniter\CLI\Console->run()
+#15 {main}
+CRITICAL - 2022-11-21 22:33:24 --> Invalid file: rubik/crear.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('rubik/crear.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('rubik/crear', [], true)
+ 3 APPPATH\Controllers\ProductoRubikController.php(27): view('rubik/crear', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProductoRubikController->crear()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductoRubikController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-21 22:43:56 --> Allowed fields must be specified for model: App\Models\ProductoRubik
+in SYSTEMPATH\BaseModel.php on line 1160.
+ 1 SYSTEMPATH\BaseModel.php(1160): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ProductoRubik')
+ 2 SYSTEMPATH\BaseModel.php(724): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\ProductoRubikController.php(58): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProductoRubikController->guardar()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductoRubikController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-21 22:54:20 --> Undefined variable $libro
+in APPPATH\Controllers\ProductoRubikController.php on line 86.
+ 1 APPPATH\Controllers\ProductoRubikController.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $libro', 'APPPATH\\Controllers\\ProductoRubikController.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProductoRubikController->editar('3')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductoRubikController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-21 22:58:45 --> unlink(../public/uploads/aqui va la imagen): No such file or directory
+in APPPATH\Controllers\ProductoRubikController.php on line 73.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../public/uploads/aqui va la imagen): No such file or directory', 'APPPATH\\Controllers\\ProductoRubikController.php', 73)
+ 2 APPPATH\Controllers\ProductoRubikController.php(73): unlink('../public/uploads/aqui va la imagen')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProductoRubikController->borrar('1')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductoRubikController))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-21 22:59:18 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\ProductoRubikController.php(51): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\uploads', '1669093157_6044fa5c11f524f93b65')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProductoRubikController->guardar()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductoRubikController))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-21 23:00:25 --> Undefined variable $datosLibro
+in APPPATH\Controllers\ProductoRubikController.php on line 131.
+ 1 APPPATH\Controllers\ProductoRubikController.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosLibro', 'APPPATH\\Controllers\\ProductoRubikController.php', 131)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProductoRubikController->actualizar()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductoRubikController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-21 23:05:56 --> Trying to access array offset on value of type null
+in APPPATH\Views\rubik\editar_producto.php on line 11.
+ 1 APPPATH\Views\rubik\editar_producto.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\rubik\\editar_producto.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\rubik\\editar_producto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('rubik/editar_producto', [], true)
+ 5 APPPATH\Controllers\ProductoRubikController.php(94): view('rubik/editar_producto', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProductoRubikController->editar('$id')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductoRubikController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-21 23:06:22 --> Trying to access array offset on value of type null
+in APPPATH\Views\rubik\editar_producto.php on line 11.
+ 1 APPPATH\Views\rubik\editar_producto.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\rubik\\editar_producto.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\rubik\\editar_producto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('rubik/editar_producto', [], true)
+ 5 APPPATH\Controllers\ProductoRubikController.php(94): view('rubik/editar_producto', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProductoRubikController->editar('$i')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductoRubikController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
